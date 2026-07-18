@@ -46,6 +46,12 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Custom Premium Dark Palette from reference image */
+  --color-spotify-black: #0A0A0B;   /* Soothing deep black for sidebar */
+  --color-spotify-dark: #121214;    /* Slightly lighter black for main area */
+  --color-gold-accent: #C8A261;     /* Elegant gold accent */
+  --color-card-dark: #18181C;       /* Card backgrounds */
 }
 
 :root {
@@ -127,4 +133,45 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Floating animation keyframes for background blobs */
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-40px, 40px) scale(1.15); }
+}
+
+.animate-blob-1 {
+  animation: blob-float-1 25s infinite ease-in-out;
+}
+
+.animate-blob-2 {
+  animation: blob-float-2 30s infinite ease-in-out;
+}
+
+/* Float & Rotate animations for aesthetic geometric shapes */
+@keyframes float-rotate-1 {
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  50% { transform: translate(15px, -25px) rotate(180deg) scale(1.05); }
+  100% { transform: translate(0px, 0px) rotate(360deg) scale(1); }
+}
+
+@keyframes float-rotate-2 {
+  0% { transform: translate(0px, 0px) rotate(360deg) scale(1); }
+  50% { transform: translate(-20px, 30px) rotate(180deg) scale(0.95); }
+  100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+}
+
+.animate-shape-1 {
+  animation: float-rotate-1 20s infinite ease-in-out;
+}
+
+.animate-shape-2 {
+  animation: float-rotate-2 25s infinite ease-in-out;
 }

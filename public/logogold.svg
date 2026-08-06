@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="90" fill="url(#bg-gradient)"/>
+  <circle cx="100" cy="100" r="75" stroke="rgba(200, 162, 97, 0.2)" stroke-width="2" stroke-dasharray="8 4"/>
+  <circle cx="100" cy="100" r="60" stroke="rgba(200, 162, 97, 0.25)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="45" stroke="rgba(200, 162, 97, 0.2)" stroke-width="2" stroke-dasharray="12 4"/>
+  
+  <!-- Center Label -->
+  <circle cx="100" cy="100" r="32" fill="url(#center-gradient)"/>
+  <circle cx="100" cy="100" r="8" fill="#090A0F"/>
+  <circle cx="100" cy="100" r="3" fill="#DEC38B"/>
+
+  <!-- Tonearm Stylus detail -->
+  <path d="M 175 40 L 140 85 L 122 80" stroke="#C8A261" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="175" cy="40" r="7" fill="#DEC38B"/>
+
+  <defs>
+    <radialGradient id="bg-gradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 100) rotate(90) scale(90)">
+      <stop stop-color="#1A1712"/>
+      <stop offset="1" stop-color="#090806"/>
+    </radialGradient>
+    <linearGradient id="center-gradient" x1="68" y1="68" x2="132" y2="132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EBD8B0"/>
+      <stop offset="0.5" stop-color="#C8A261"/>
+      <stop offset="1" stop-color="#876427"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -3,20 +3,20 @@ import { Home, Compass, Radio, Music, Heart, FolderHeart, Plus, Library } from '
 
 const Sidebar = () => {
     return (
-        <div className='h-full w-60 bg-spotify-black border-r border-neutral-900/40 relative overflow-hidden flex flex-col justify-between text-neutral-400 z-10'>
-            {/* Matching Dot Grid for the Sidebar */}
+        <div className='h-full w-60 bg-transparent border-r border-neutral-900/40 relative overflow-hidden flex flex-col justify-between text-neutral-400 z-10'>
+            {/* Matching Dot Grid for the Sidebar
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.08] z-0"
                 style={{
                     backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
                     backgroundSize: '20px 20px'
                 }}
-            />
+            /> */}
 
             {/* Small Ambient Glow inside Sidebar */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            {/* <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-[-10%] left-[-10%] w-[200px] h-[200px] rounded-full bg-gold-accent/5 blur-[50px]" />
-            </div>
+            </div> */}
 
             {/* Content Container */}
             <div className="relative z-10 p-6 flex flex-col gap-8 flex-1">

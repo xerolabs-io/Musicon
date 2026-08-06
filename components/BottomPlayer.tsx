@@ -3,7 +3,7 @@ import { Play, SkipBack, SkipForward, Volume2, Repeat, Shuffle } from 'lucide-re
 
 const BottomPlayer = () => {
     return (
-        <div className='bg-spotify-black border-t border-neutral-900/60 h-24 px-6 flex items-center justify-between text-white'>
+        <div className='bg-transparent backdrop-blur-md border-t border-neutral-900/60 h-24 px-6 flex items-center justify-between text-white'>
             {/* Left track details */}
             <div className='flex items-center gap-3 w-1/4'>
                 <div className='w-14 h-14 bg-neutral-800 rounded-lg flex items-center justify-center text-xs text-neutral-400'>

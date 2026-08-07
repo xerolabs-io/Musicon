@@ -2,8 +2,8 @@ import React from 'react'
 
 const Page = () => {
     return (
-        <div className='text-white text-lg'>
-            Root Hiii
+        <div className='text-white text-lg font-logotext uppercase'>
+            Musicon
         </div>
     )
 }

@@ -55,7 +55,24 @@
   /* Elegant gold accent */
   --color-card-dark: #18181C;
   /* Card backgrounds */
+
+  /* --font-inter: var(--font-inter) */
+  --font-logotext: var(--font-logofont);
+  --font-poppins: var(--font-poppins);
+  --color-accent-gradient: linear-gradient(135deg, #EBD8B0 0%, #C8A261 50%, #A88241 100%);
 }
+
+.text-accent-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tab-accent-gradient {
+  background: linear-gradient(to right, rgba(200, 162, 97, 0.4) 0%, transparent 100%);
+}
+
 
 :root {
   --background: oklch(1 0 0);
@@ -112,13 +129,61 @@
     --background: #090806;
     --foreground: #f4f4f5;
     --accent: #C8A261;
-    --accent-light: #dec38b;
+    --accent-light: #DEC38B;
     --accent-dark: #876427;
     --accent-glow: rgba(200, 162, 97, 0.35);
     --accent-bg-subtle: rgba(200, 162, 97, 0.15);
     --accent-border: rgba(200, 162, 97, 0.25);
     --accent-border-hover: rgba(200, 162, 97, 0.6);
+    --accent-gradient: linear-gradient(135deg, #EBD8B0 0%, #C8A261 50%, #A88241 100%);
+    --button-gradient: linear-gradient(135deg, #EBD8B0, #C8A261, #A88241);
+    --text-primary-accent: #C8A261;
+    --text-light-accent: #DEC38B;
   }
+
+  [data-accent="blue"] {
+    --background: #07090e;
+    --foreground: #f4f4f5;
+    --accent: #00f2fe;
+    --accent-light: #4facfe;
+    --accent-dark: #0066ff;
+    --accent-glow: rgba(0, 242, 254, 0.35);
+    --accent-bg-subtle: rgba(0, 242, 254, 0.15);
+    --accent-border: rgba(0, 242, 254, 0.25);
+    --accent-border-hover: rgba(0, 242, 254, 0.6);
+    --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    --button-gradient: linear-gradient(135deg, #00f2fe, #4facfe);
+    --text-primary-accent: #00f2fe;
+    --text-light-accent: #4facfe;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 13, 10, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 

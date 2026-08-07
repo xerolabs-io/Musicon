@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter, M_PLUS_Code_Latin, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
 import Sidebar from "@/components/Sidebar";
 import BottomPlayer from "@/components/BottomPlayer";
 import { DotPattern } from "@/components/ui/dot-pattern";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const logofont = M_PLUS_Code_Latin({ subsets: ['latin'], variable: '--font-logofont', weight: ["400"] })
+const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight: ['400'] })
 
 export const metadata: Metadata = {
   title: {
@@ -92,13 +82,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className}`} suppressHydrationWarning>
+      className={`${inter.className} ${logofont.variable} ${poppins.variable}`} suppressHydrationWarning>
 
       <body>
         <TooltipProvider>
 
           <div className="h-screen overflow-hidden flex flex-col bg-spotify-black text-white">
 
+            {/* Dot Pattern */}
             <div className="absolute top-0 bottom-0 left-0 right-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
               <DotPattern
                 glow={false}
@@ -109,9 +100,7 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-1 min-h-0">
-              <div className="h-full">
-                <Sidebar />
-              </div>
+              <Sidebar />
               <div className="flex-1 h-full bg-transparent p-8 overflow-y-auto relative min-h-0 flex flex-col justify-between">
                 {/* Main Content Display*/}
                 <div className="h-full">
@@ -119,6 +108,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
+
             <div>
               <BottomPlayer />
             </div>

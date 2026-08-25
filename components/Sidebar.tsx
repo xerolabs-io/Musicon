@@ -10,7 +10,7 @@ const Sidebar = () => {
     const pathname = usePathname()
 
     return (
-        <aside className={`h-full w-64 bg-transparent border-r border-gold-accent/50
+        <aside className={`h-full sm:w-54 md:w-64 bg-transparent border-r border-gold-accent/50
             relative overflow-hidden flex flex-col text-neutral-400 z-10 backdrop-blur-md py-4`}>
 
             {/* Logo Section */}

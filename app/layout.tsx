@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Sidebar from "@/components/Sidebar";
 import BottomPlayer from "@/components/BottomPlayer";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const logofont = M_PLUS_Code_Latin({ subsets: ['latin'], variable: '--font-logofont', weight: ["400"] })
@@ -99,17 +100,27 @@ export default function RootLayout({
               />
             </div>
 
-            <div className="flex flex-1 min-h-0">
+            <div className="hidden sm:flex flex-1 min-h-0">
               <Sidebar />
               <div className="flex-1 h-full bg-transparent p-8 overflow-y-auto relative min-h-0 flex flex-col justify-between">
                 {/* Main Content Display*/}
                 <div className="h-full">
-                  {children}
+                  <div className="flex flex-col">
+                    <Header />
+                    <div>
+                      {children}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div>
+            <div className="flex flex-col sm:hidden justify-center items-center min-h-full">
+              <div>MUSICON FOR MOBILE</div>
+              <div>COMMING SOON...</div>
+            </div>
+
+            <div className='hidden sm:flex w-full '>
               <BottomPlayer />
             </div>
 
